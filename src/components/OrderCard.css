@@ -1,0 +1,89 @@
+.pedido-item.pronto {
+    background: #fff;
+    border-color: #607D8B;
+    margin-inline: 20px;
+    padding: 12px;
+    border-radius: 8px;
+        margin-bottom: 12px;
+
+}
+
+.pedido-item.impedido {
+    background: #ffcdd2;
+    border-color: #f44336;
+    margin-inline: 20px;
+    border-radius: 8px;
+        margin-bottom: 12px;
+
+
+}
+
+.pedido-header {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.pedido-info {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.pedido-info small {
+    display: block;
+    margin-top: 4px;
+}
+
+.impedimento {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #ddd;
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+.pedido-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    gap: 8px;
+}
+
+.pedido-actions button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-entregar {
+    background: #4caf50;
+    color: white;
+    margin-left: auto;
+}
+
+.btn-entregar:hover {
+    background: #388e3c;
+}
+
+.btn-cancelar {
+    background: #f44336;
+    color: white;
+}
+
+.btn-cancelar:hover {
+    background: #d32f2f;
+}
+
+.btn-realizar {
+    background: #4caf50;
+    color: white;
+}
+
+.btn-realizar:hover {
+    background: #388e3c;
+}

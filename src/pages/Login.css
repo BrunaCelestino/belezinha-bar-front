@@ -64,4 +64,6 @@
   color: red;
   font-size: 14px;
   text-align: center;
+  min-height: 18px; 
+  margin: 0;
 }

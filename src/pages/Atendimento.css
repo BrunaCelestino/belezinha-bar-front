@@ -1,0 +1,197 @@
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: #356377;
+  margin-bottom: 20px;
+}
+
+.left-section, .right-section {
+  padding: 0px;
+}
+
+.cliente-pedido {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cliente-pedido input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.cliente-pedido input.pedido-id-display {
+  background: #eee;
+  font-weight: bold;
+}
+
+.pedido-items h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.pedido-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+.btn-remove {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.obs-desconto {
+  margin-top: 20px;
+}
+
+.obs-desconto label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.obs-desconto textarea,
+.obs-desconto input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+/* Total e finalizar pedido */
+.total-finalizar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 2px solid #ddd;
+}
+
+.total-finalizar .total {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.btn-finalizar {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-finalizar:hover {
+  background: #45a049;
+}
+
+.cardapio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.search-box {
+  display: flex;
+  gap: 5px;
+}
+
+.search-box input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.search-box button {
+  padding: 8px 12px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cardapio-itens {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardapio-item {
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cardapio-item:hover {
+  background: #e3f2fd;
+}
+
+.cardapio-item h4 {
+  margin: 0 0 5px 0;
+  color: #2c3e50;
+}
+
+.cardapio-item p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #777;
+}
+
+.preco {
+  font-weight: bold;
+  color: #e91e63;
+}
+
+.not-available {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.badge-unavailable {
+  font-size: 0.75em;
+  color: #f44336;
+}
+
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cliente-pedido {
+    flex-direction: column;
+  }
+
+  .total-finalizar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .btn-finalizar {
+    width: 100%;
+  }
+}

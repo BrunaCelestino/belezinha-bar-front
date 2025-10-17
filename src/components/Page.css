@@ -1,0 +1,35 @@
+.page-container {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0px;
+  background: #477284;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background: #F6EAC2;
+  gap: 10px;
+}
+
+.top-bar h1 {
+  margin: 0;
+  color: #F39B3A;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

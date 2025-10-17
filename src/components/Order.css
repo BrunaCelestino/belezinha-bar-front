@@ -1,0 +1,272 @@
+.left-section {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #4a7280;
+    border-radius: 6px;
+    
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background: #F6EAC2;
+    gap: 10px;
+}
+
+.top-bar h1 {
+    margin: 0;
+    color: #F39B3A;
+}
+
+.order-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    background: #F6EAC2;
+    padding: 15px 20px;
+    margin-top: 0px
+}
+
+.order-top-bar label {
+    font-weight: bold;
+    color: #F39B3A;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+
+.order-top-bar input {
+    padding: 10px 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 90px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.order-top-bar input:disabled {
+    background-color: #f8f7f7;
+    text-align: center;
+    color: #555;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 1.6em;
+    color: #F39B3A;
+    margin-left: auto;
+    transition: transform 0.2s;
+}
+
+.menu-icon:hover {
+    transform: scale(1.2);
+}
+
+.pedido-items {
+    padding: 10px;
+    border-radius: 4px;
+    min-height: 120px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.pedido-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pedido-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding-bottom: 14px;
+    padding-top: 12px;
+}
+
+.pedido-item-header strong {
+    color: #333;
+    font-size: 15px;
+    flex: 1;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.item-details label {
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.item-details input {
+    width: 65px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+}
+
+.item-details input[type="number"]::-webkit-inner-spin-button,
+.item-details input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn-remove {
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.btn-remove:hover {
+    background: #d32f2f;
+}
+
+.obs-desconto {
+    display: flex;
+    flex-direction: column;
+    background: #F6EAC2;
+    padding: 10px;
+    border-radius: 4px;
+    gap: 8px;
+}
+
+.label-obs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.obs-desconto label {
+    font-weight: bold;
+    color: #F39B3A;
+}
+
+.label-obs input {
+    flex: 1;
+}
+
+.obs-desconto input {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.bottom-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.valores-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.status.pago {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    color: #F39B3A;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 0px;
+
+}
+
+.status.pago input {
+    width: 18px;
+    height: 18px;
+    accent-color: #F39B3A;
+    cursor: pointer;
+    align-items: center;
+
+}
+
+.desconto-total {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+
+
+}
+
+.desconto-total strong {
+    color: #333;
+}
+
+.desconto-total input {
+    width: 80px;
+    text-align: right;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.desconto-total input:disabled {
+    background-color: #f8f7f7;
+    color: #555;
+}
+
+.row-bottom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-finalizar {
+    background: #4caf50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-finalizar:hover {
+    background: #3e8e41;
+}

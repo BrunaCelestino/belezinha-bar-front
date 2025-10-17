@@ -1,0 +1,122 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+
+.modal-container {
+  width: 90%;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f6f6f6;
+  border-bottom: 1px solid #ddd;
+  color: #4a7280;
+
+}
+
+.btn-close {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-filters {
+  display: flex;
+  gap: 10px;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+
+.modal-filters input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-filters select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.modal-filters label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.modal-body {
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.cardapio-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cardapio-item:hover {
+  background: #e3f2fd;
+}
+
+.not-available {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cardapio-main h4 {
+  margin: 0 0 5px 0;
+  color: #2c3e50;
+}
+
+.cardapio-main p.desc {
+  margin: 0;
+  font-size: 0.9em;
+  color: #777;
+}
+
+.preco {
+  font-weight: bold;
+  color: #e91e63;
+}
+
+.badge-unavailable {
+  background: #f44336;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.8em;
+}

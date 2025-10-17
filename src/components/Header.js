@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useLocation, useNavigate  } from "react-router-dom";
-import { FaPen , FaBell , FaFolder , FaCog } from "react-icons/fa";
-
+import { useLocation, useNavigate } from "react-router-dom";
+import { FaPen, FaBell, FaFolder, FaCog } from "react-icons/fa";
+import Modal from "./Modal";
 import "./Header.css";
 
 function Header({ isLogged, onLogout }) {
@@ -9,17 +9,25 @@ function Header({ isLogged, onLogout }) {
   const navigate = useNavigate();
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
- const navItems = [
-    { path: "/atendimento", label: "Atendimento", icon: <FaPen  /> },
-    { path: "/pedidos", label: "Pedidos", icon: <FaBell  /> },
-    { path: "/caixa", label: "Caixa", icon: <FaFolder  /> },
+  const navItems = [
+    { path: "/atendimento", label: "Atendimento", icon: <FaPen /> },
+    { path: "/pedidos", label: "Pedidos", icon: <FaBell /> },
+    { path: "/caixa", label: "Caixa", icon: <FaFolder /> },
     { path: "/administracao", label: "Administração", icon: <FaCog /> },
   ];
 
   const handleClick = (item) => {
     if (isLogged) navigate(item.path);
     setMenuOpen(false);
+  };
+
+  const handleLogoutClick = () => setModalOpen(true);
+
+  const confirmLogout = () => {
+    setModalOpen(false);
+    onLogout();
   };
 
   return (
@@ -36,7 +44,8 @@ function Header({ isLogged, onLogout }) {
         {navItems.map((item) => (
           <button
             key={item.path}
-            className={`nav-btn ${!isLogged ? "disabled" : ""} ${location.pathname === item.path ? "active" : ""}`}
+            className={`nav-btn ${!isLogged ? "disabled" : ""
+              } ${location.pathname === item.path ? "active" : ""}`}
             onClick={() => handleClick(item)}
             disabled={!isLogged}
           >
@@ -44,12 +53,27 @@ function Header({ isLogged, onLogout }) {
             <span className="label">{item.label}</span>
           </button>
         ))}
+
         {isLogged && (
-          <button className="logout-btn" onClick={onLogout}>
+          <button className="logout-btn" onClick={handleLogoutClick}>
             Sair
           </button>
         )}
       </nav>
+
+
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title="CONFIRMAR LOGOUT">
+        <p>Deseja desconectar?</p>
+        <div className="modal-btn-group">
+          <button className="modal-btn confirm" onClick={confirmLogout}>
+            SIM
+          </button>
+          <button className="modal-btn cancel" onClick={() => setModalOpen(false)}>
+            NÃO
+          </button>
+        </div>
+      </Modal>
+
     </header>
   );
 }
